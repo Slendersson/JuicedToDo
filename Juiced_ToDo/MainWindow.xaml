@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Juiced_ToDo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Juiced ToDo" Height="450" Width="800">
     <Grid>
-        
+        <TextBox FontSize="180">*Content*</TextBox>
     </Grid>
 </Window>

@@ -15,13 +15,18 @@ using System.Windows.Shapes;
 
 namespace Juiced_ToDo
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
+            loginContext loginContext = new loginContext();
+            LoginWindow loginWindow = new LoginWindow(ref loginContext);
+            loginWindow.ShowDialog();
+            if(loginContext.getIsLoggedIn() == false)
+            {
+                MessageBox.Show("Logowanie nie powiodło się.\nAplikacja teraz zostanie zamknięta.", "Nie Zalogowano", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Application.Current.Shutdown();
+            }
             InitializeComponent();
             Console.WriteLine("Init.");
         }
