@@ -37,8 +37,12 @@ namespace Juiced_ToDo
                 MessageBox.Show("Wypełnij wszystkie pola.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            
-            
+            //db fetch and login logic happens here
+            loginContextLocalRef.setIsLoggedIn(true);
+            loginContextLocalRef.setEmailAddress("xyz@example.com");
+            loginContextLocalRef.setUserID(0xBEEF);
+
+
         }
     }
 }

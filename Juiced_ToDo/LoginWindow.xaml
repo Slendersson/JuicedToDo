@@ -14,14 +14,26 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center">Logowanie</TextBlock>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Label VerticalContentAlignment="Center">Adres E-Mail:</Label>
-            <TextBox Height="30" Width="300" Margin="20 0 0 0" VerticalContentAlignment="Center" Name="tbemail_address"></TextBox>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Label VerticalContentAlignment="Center">Hasło:</Label>
-            <TextBox Height="30" Width="300" Margin="20 0 0 0" VerticalContentAlignment="Center" Name="tbpassword"></TextBox>
-        </StackPanel>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label VerticalContentAlignment="Center" Grid.Column="0">Adres E-Mail:</Label>
+            <TextBox Height="30" Width="300"  VerticalContentAlignment="Center" Name="tbemail_address" Grid.Column="1"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label VerticalContentAlignment="Center" Grid.Column="0">Hasło:</Label>
+            <TextBox Height="30" Width="300" VerticalContentAlignment="Center" Name="tbpassword" Grid.Column="1"></TextBox>
+        </Grid>
         <Button Grid.Row="3" Height="35" Width="200" Click="LoginButtonClicked" Tag="{}">Zaloguj</Button>
     </Grid>
 </Window>

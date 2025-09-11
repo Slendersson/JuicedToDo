@@ -8,7 +8,7 @@ namespace Juiced_ToDo
 {
     public class loginContext
     {
-        private bool isLoggedIn;
+        private bool isLoggedIn { get; set; }
         private int userID;
         private string emailAddress;
 
