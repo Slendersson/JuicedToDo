@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace Juiced_ToDo
         public MainWindow()
         {
             loginContext loginContext = new loginContext();
+            ObservableCollection<taskModel> taskList = new ObservableCollection<taskModel>();
+
             LoginWindow loginWindow = new LoginWindow(ref loginContext);
             loginWindow.ShowDialog();
             if(loginContext.getIsLoggedIn() == false)
