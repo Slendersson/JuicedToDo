@@ -34,6 +34,6 @@
             <Label VerticalContentAlignment="Center" Grid.Column="0">Hasło:</Label>
             <TextBox Height="30" Width="300" VerticalContentAlignment="Center" Name="tbpassword" Grid.Column="1"></TextBox>
         </Grid>
-        <Button Grid.Row="3" Height="35" Width="200" Click="LoginButtonClicked" Tag="{}">Zaloguj</Button>
+        <Button Grid.Row="3" Height="35" Width="200">Zaloguj</Button>
     </Grid>
 </Window>

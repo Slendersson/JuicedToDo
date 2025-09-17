@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Juiced_ToDo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,39 +10,32 @@ namespace Juiced_ToDo
     public class loginContext
     {
         private bool isLoggedIn { get; set; }
-        private int userID;
-        private string emailAddress;
+        private UserModel user { get; set; }
 
         public loginContext()
         {
             isLoggedIn = false;
-            userID = -1;
-            emailAddress = String.Empty;
+            user = null;
         }
         
         public void setIsLoggedIn(bool isLoggedIn)
         {
             this.isLoggedIn = isLoggedIn;
         }
-        public void setUserID(int userID)
+
+        public void setUser(UserModel user)
         {
-            this.userID = userID;
+            this.user = user;
         }
-        public void setEmailAddress(string emailAddress)
-        {
-            this.emailAddress = emailAddress;
-        }
+
         public bool getIsLoggedIn()
         {
             return isLoggedIn;
         }
-        public int getUserID()
+       public UserModel getUser()
         {
-            return userID;
+            return user;
         }
-        public string getEmailAddress()
-        {
-            return emailAddress;
-        }
+
     }
 }
