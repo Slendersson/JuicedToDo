@@ -21,6 +21,7 @@ namespace Juiced_ToDo
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ViewModels.MainWindowViewModel();
         }
     }
 }
