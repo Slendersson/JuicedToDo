@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace HRApplication_WPF.Commands
+namespace Juiced_ToDo.Commands
 {
     public class RelayCommand : ICommand
     {

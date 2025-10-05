@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace HRApplication_WPF.Commands
+namespace Juiced_ToDo.Commands
 {
     public class AsyncRelayCommand : ICommand
     {
